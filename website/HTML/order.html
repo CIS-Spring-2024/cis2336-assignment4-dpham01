@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../CSS/order.css" />
+</head>
+<body>
+    <header>
+        <img src="../Image/uh-vert-full-color-rgb.png"></img>
+        <h1>Cafeteria Page</h1>
+    </header>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="foods.html">Foods Served</a>
+        <a class="active" href="hours.html">Order Now</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <script src="../Scripts/order.js"></script>
+
+    <h2>Food Order Form</h1>
+    <form id="orderForm" onsubmit=validateForm()>
+        <h3>Location</h3>
+        <div>
+            <select id="location">
+                <option value="Moody">Moody</option>
+                <option value="Cougar Woods">Cougar Woods</option>
+                <option value="Student Center">Student Center</option>
+              </select>
+        </div>
+        <h3>Breakfast</h3>
+        <div>
+            <label for="breakfastBurrito">Breakfast Burrito ($7):</label>
+            <input type="number" id="breakfastBurrito" name="breakfastBurrito" min="0" value="0" max="10">
+            <span id="breakfastBurritoError" class="error"></span>
+        </div>
+        <div>
+            <label for="breakfastSandwich">Breakfast Sandwich ($6):</label>
+            <input type="number" id="breakfastSandwich" name="breakfastSandwich" min="0" value="0" max="10">
+            <span id="breakfastSandwichError" class="error"></span>
+        </div>
+        <div>
+            <label for="friedChickenWaffles">Fried Chicken and Waffles ($10):</label>
+            <input type="number" id="friedChickenWaffles" name="friedChickenWaffles" min="0" value="0" max="10">
+            <span id="friedChickenWafflesError" class="error"></span>
+        </div>
+
+        <h3>Lunch</h3>
+        <div>
+            <label for="friedChickenSandwich">Fried Chicken Sandwich ($8):</label>
+            <input type="number" id="friedChickenSandwich" name="friedChickenSandwich" min="0" value="0"max="10">
+            <span id="friedChickenSandwichError" class="error"></span>
+        </div>
+        <div>
+            <label for="chickenCaesarSalad">Chicken Caesar Salad ($9):</label>
+            <input type="number" id="chickenCaesarSalad" name="chickenCaesarSalad" min="0" value="0"max="10">
+            <span id="chickenCaesarSaladError" class="error"></span>
+        </div>
+        <div>
+            <label for="cheeseburger">Cheeseburger ($7):</label>
+            <input type="number" id="cheeseburger" name="cheeseburger" min="0" value="0"max="10">
+            <span id="cheeseburgerError" class="error"></span>
+        </div>
+
+        <h3>Dinner</h3>
+        <div>
+            <label for="chickenRiceBowl">Chicken Rice Bowl ($13):</label>
+            <input type="number" id="chickenRiceBowl" name="chickenRiceBowl" min="0" value="0"max="10">
+            <span id="chickenRiceBowlError" class="error"></span>
+        </div>
+        <div>
+            <label for="tofuRiceBowl">Tofu Rice Bowl ($10):</label>
+            <input type="number" id="tofuRiceBowl" name="tofuRiceBowl" min="0" value="0"max="10">
+            <span id="tofuRiceBowlError" class="error"></span>
+        </div>
+        <div>
+            <label for="steakRiceBowl">Steak Rice Bowl ($15):</label>
+            <input type="number" id="steakRiceBowl" name="steakRiceBowl" min="0" value="0"max="10">
+            <span id="steakRiceBowlError" class="error"></span>
+        </div>
+
+        <button type="submit">Submit Order</button>
+    </form>
+</body>
+
+<footer>
+    <p>&copy; 3034 University of Houston. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:uh@edu.com">uh@edu.com</a>.</p>
+</footer>
