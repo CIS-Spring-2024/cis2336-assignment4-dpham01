@@ -55,7 +55,7 @@ export const processOrder = async (req, res) => {
             
             saveOrder(orders); 
 
-            const confirmationMessage = `Your order total is $${total} at ${location}. It will be ready for pickup in approximately 15 minutes.`;
+            const confirmationMessage = 'Your order is being processed.';
             res.status(200).json({ message: confirmationMessage, orderNumber: orderNum });
         });
     }

@@ -1,42 +1,12 @@
 [
   {
     "orderNumber": 1,
-    "total": 39,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 2,
-    "total": 39,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 3,
-    "total": 14,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 4,
-    "total": 21,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 5,
-    "total": 14,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 6,
     "total": 16,
     "location": "Moody"
   },
   {
-    "orderNumber": 7,
-    "total": 18,
-    "location": "Moody"
-  },
-  {
-    "orderNumber": 8,
-    "total": 14,
+    "orderNumber": 2,
+    "total": 16,
     "location": "Moody"
   }
 ]

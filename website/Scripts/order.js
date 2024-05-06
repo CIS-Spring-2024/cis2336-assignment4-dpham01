@@ -1,3 +1,5 @@
+let orderNum = 0;
+
 window.addEventListener('load', () => {
     var form = document.getElementById("orderForm");
     function handleForm(event) { event.preventDefault(); } 
@@ -8,7 +10,12 @@ function getOrderDetails(orderNumber) {
     fetch(`http://localhost:8000/menu/orderDetails/${orderNumber}`)
     .then(response => response.json())
     .then(orderDetails => {
-        console.log('Order details retrieved:', orderDetails);
+        if(confirm("Please confirm your order details\nOrder #" + orderDetails.orderNumber + "\nOrder Location: " + orderDetails.location + "\nTotal: $" + orderDetails.total)){
+            alert("Order number " + orderDetails.orderNumber + " successfully placed");
+        }
+        else{
+            alert("Order Canceled");
+        }
     })
     .catch(error => console.error('Error fetching order details:', error));
 }
@@ -23,19 +30,17 @@ function sendOrderDetails(orderDetails){
     })
     .then(response => response.json())  
     .then(data => {
-        console.log(data.orderNumber);
         if (data.orderNumber) {
             getOrderDetails(data.orderNumber);
-            return data.orderNumber;
         }
+        alert(data.message);
     })  
     .catch(error => {
         console.error('Error:', error);
-        return 0;
     });
 }
 
-function validateForm() {
+async function validateForm() {
 
     const orderData = {
         location: document.getElementById("location").value,
@@ -50,6 +55,5 @@ function validateForm() {
         steakRiceBowl: document.getElementById("steakRiceBowl").value
     };
 
-    const orderNum = sendOrderDetails(orderData);
-    console.log(orderNum);
+    sendOrderDetails(orderData);
 }
