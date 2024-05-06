@@ -1,0 +1,22 @@
+[
+  {
+    "orderNumber": 1,
+    "total": 16,
+    "location": "Moody"
+  },
+  {
+    "orderNumber": 2,
+    "total": 16,
+    "location": "Moody"
+  },
+  {
+    "orderNumber": 3,
+    "total": 18,
+    "location": "Moody"
+  },
+  {
+    "orderNumber": 4,
+    "total": 7,
+    "location": "Moody"
+  }
+]
